@@ -1,0 +1,84 @@
+Week 3 — React + JSX + Tailwind Assignment Guide
+
+Name: Vincent Ex
+Course: Web Development (Frontend)
+Week: 3
+Topic: React.js, JSX, and Styling with Tailwind CSS
+
+1. Introduction
+
+This week’s assignment focused on understanding the fundamentals of React.js, using JSX syntax, and applying styles with Tailwind CSS. The main goal was to learn how to build and style simple user interfaces efficiently using React’s component-based architecture.
+
+2. Learning Objectives
+
+By the end of this week, I was expected to:
+
+Understand what React.js is used for.
+
+Create and render React components using JSX.
+
+Apply both inline and external CSS styles.
+
+Explore Tailwind CSS for modern and responsive styling.
+
+Use props to pass data between components.
+
+Explain the advantages of CSS Modules.
+
+3. Key Concepts and Quiz Answers
+Question	Correct Answer	Explanation
+What is React.js primarily used for?	C) Building user interfaces	React helps developers create interactive UIs using reusable components.
+Which syntax is correct for rendering a React component named App?	A) <App />	React components are rendered using self-closing JSX tags.
+Which file extension is commonly used for React components?	B) .jsx	.jsx supports writing HTML-like syntax directly in JavaScript.
+How do you apply an external CSS file to a React component?	A) import './styles.css';	React uses ES6 import syntax to include styles.
+Which is the correct way to add inline styles in React?	B) <div style={{ color: 'red' }}>Hello</div>	Inline styles are written as JS objects with double braces.
+Which is NOT a valid way to style a React component?	D) HTML style attribute	React doesn’t use plain HTML attributes for styling.
+Which method is used to create a functional component?	A) or C)	Both function Component() and arrow functions create components.
+How do you pass props to a component?	C) <Component name="John" />	Props are passed as attributes in JSX.
+Main advantage of CSS Modules?	B) It avoids style conflicts by scoping styles locally	CSS Modules ensure each component’s styles are isolated.
+4. Practical Exercise
+
+Task:
+Build a simple React app that displays a greeting card using JSX and Tailwind CSS.
+
+Steps Taken:
+
+Created a new React project using Vite:
+
+npm create vite@latest react-app -- --template react
+
+
+Installed Tailwind CSS and configured it.
+
+Created a component named GreetingCard.jsx.
+
+Used props to pass a name and message.
+
+Styled it with Tailwind classes.
+
+Code Example:
+
+// GreetingCard.jsx
+function GreetingCard({ name, message }) {
+  return (
+    <div className="bg-blue-100 p-6 rounded-2xl shadow-md text-center max-w-sm mx-auto">
+      <h1 className="text-2xl font-semibold text-blue-800">Hello, {name}!</h1>
+      <p className="text-gray-700 mt-2">{message}</p>
+    </div>
+  );
+}
+
+export default GreetingCard;
+
+// App.jsx
+import GreetingCard from "./GreetingCard";
+
+function App() {
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+      <GreetingCard name="Vincent" message="Welcome to React and Tailwind!" />
+    </div>
+  );
+}
+
+export default App;
